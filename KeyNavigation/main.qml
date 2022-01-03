@@ -20,9 +20,11 @@ FocusScope {
         Keys.onPressed: onPressed
         function onPressed(event) {
             if (event.key == Qt.Key_Left) {
+                col1.currentIndex = col2.currentIndex
                 col1.focus = true
                 event.accepted = true;
             } else if (event.key == Qt.Key_Right) {
+                col2.currentIndex = col1.currentIndex
                 col2.focus = true
                 event.accepted = true;
             }
